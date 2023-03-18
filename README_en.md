@@ -55,6 +55,7 @@ python mppdfmd.py
   - Be sure to insert `one or more blank lines` between the `<div>` tag and the generated ticks. This is necessary to ensure correct interpretation of Markdown syntax when converting from Markdown to HTML using panooc.
   - The `markdownlint` plugin can be applied to prevent strange behavior during parsing by Pandoc. Please note that if the text is not written in proper Markdown syntax, it may not be converted to HTML with the intended presentation.
 - Execute the pandoc command that appears following the `Markdown to HTML : use the follow command` instruction. The ~directory path~ in the example below will vary depending on your environment.
+  - If the execution is successful, instructions for subsequent tasks and commands that can be copied and pasted are displayed.
 
 ``` sh
 pandoc ~ directory path ~\\mppdfmd-kit\\_MD//sample.md --to html5 --resource-path _MD\\ --embed-resources --standalone --css _HTML/github-markdown-light-custom4pdf.css --output _HTML//sample.html
