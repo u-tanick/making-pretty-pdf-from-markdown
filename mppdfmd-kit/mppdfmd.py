@@ -38,7 +38,8 @@ CONFIG_YAML = "mppdfmd-config.yaml"
 with open(CONFIG_YAML, encoding="utf-8") as f:
     filenames = yaml.load(f, Loader=yaml.FullLoader)
 md_files = filenames["md-files"]
-merged_file_name = os.path.join(CURRENT_DIR, (MD_DIR + filenames["merged-file-name"]))
+merged_file_name = MD_DIR + filenames["merged-file-name"]
+
 
 print("--- Selected Markdown files -----------------")
 print(md_files)
@@ -71,7 +72,7 @@ print("\n")
 
 # MD to HTML に変換する
 # 定数
-HTML_DIR = "_HTML//"
+HTML_DIR = "_HTML/"
 translated_html = HTML_DIR + (filenames["merged-file-name"].rsplit(".",1))[0] + ".html"
 # 方法：下記コマンドを実行（コピペ可能）
 print("----------------------------------")
@@ -90,7 +91,7 @@ print("\n")
 
 # HTML to PDF に変換する
 # 定数
-PDF_DIR = "_PDF//"
+PDF_DIR = "_PDF/"
 translated_pdf = PDF_DIR + (filenames["merged-file-name"].rsplit(".",1))[0] + ".pdf"
 copyright_text = filenames["copyright"]
 # 方法：下記コマンドを実行（コピペ可能）
