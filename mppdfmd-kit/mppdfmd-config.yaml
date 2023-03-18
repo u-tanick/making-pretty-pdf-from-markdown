@@ -1,0 +1,14 @@
+# 結合結果となるMarkdownファイル名（拡張子含む）
+merged-file-name: "sample.md"
+
+# 結合結果となるMarkdownファイル名（拡張子含む）
+copyright: "copyright hoge hige hanage."
+
+# 結合するMarkdownのリスト。margeMD.pyスクリプトから相対パスで記述（拡張子含む）
+md-files:
+  - CoverAndToC.md
+  - md1/chapter1.md
+  - md2/chapter2.md
+  - md3/chapter3.md
+  - md3/md4/chapter4.md
+  - Remark.md
